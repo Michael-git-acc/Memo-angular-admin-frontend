@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { authGuard } from '@core/guards/auth.guard';
+import { guestGuard } from '@core/guards/guest.guard';
 import { permissionGuard } from '@core/guards/permission.guard';
 import { ShellComponent } from '@layout/shell.component';
 
@@ -11,6 +12,7 @@ export const routes: Routes = [
   },
   {
     path: 'connexion',
+    canActivate: [guestGuard],
     loadChildren: () => import('@features/auth/auth.routes').then((m) => m.AUTH_ROUTES),
   },
   {

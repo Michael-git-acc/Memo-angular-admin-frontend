@@ -8,7 +8,8 @@ import {
 } from '@angular/core';
 import { PERMISSION_CHECKER, PermissionChecker } from './has-permission.token';
 
-export { PERMISSION_CHECKER, PermissionChecker };
+export { PERMISSION_CHECKER };
+export type { PermissionChecker };
 
 @Directive({
   selector: '[appHasPermission]',

@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { AuthPageComponent } from './pages/auth-page.component';
+import { ConnexionPageComponent } from './pages/connexion-page.component';
 
 export const AUTH_ROUTES: Routes = [
   {
     path: '',
-    component: AuthPageComponent,
+    component: ConnexionPageComponent,
   },
 ];

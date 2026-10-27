@@ -108,7 +108,7 @@ module.exports = defineConfig([
             },
             {
               from: 'app',
-              allow: ['core', 'shared', 'layout', 'env'],
+              allow: ['app', 'core', 'shared', 'layout', 'env', 'feature'],
             },
           ],
         },

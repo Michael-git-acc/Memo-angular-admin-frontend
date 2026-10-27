@@ -11,9 +11,9 @@ import { AuthService } from '@core/services/auth.service';
       </div>
 
       <div class="topbar-user">
-        <span class="user-name">
-          {{ sessionService.utilisateur()?.nom ?? 'Administrateur' }}
-        </span>
+        @if (sessionService.utilisateur()?.nom; as nom) {
+          <span class="user-name">{{ nom }}</span>
+        }
 
         <button
           type="button"
@@ -87,11 +87,7 @@ export class TopbarComponent {
   protected readonly sessionService = inject(SessionService);
   private readonly authService = inject(AuthService);
 
-  protected deconnecter(): void {
-    try {
-      this.authService.deconnecter();
-    } catch {
-      // Coquille: attendue pour le moment
-    }
+  protected async deconnecter(): Promise<void> {
+    await this.authService.deconnecter();
   }
 }

@@ -6,7 +6,6 @@ import {
 } from '@angular/core';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { ToastService } from './toast.service';
-import { Toast } from './toast.types';
 
 @Component({
   selector: 'app-toast',
