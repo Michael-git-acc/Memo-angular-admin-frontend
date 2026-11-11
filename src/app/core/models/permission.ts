@@ -4,6 +4,7 @@
  */
 export type Permission =
   | 'gerer_ecoles'
+  | 'gerer_espaces'
   | 'gerer_utilisateurs'
   | 'gerer_roles'
   | 'alimenter'
